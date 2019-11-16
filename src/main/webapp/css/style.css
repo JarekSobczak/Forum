@@ -1,0 +1,23 @@
+:root {
+    --footer-height: 25px;
+    --padding-top: 75px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main {
+    padding-top: var(--padding-top);
+    min-height: calc(100vh - var(--footer-height) - var(--padding-top));
+}
+
+footer {
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: var(--footer-height); /* Wysokość stopki */
+    background: #e9ecef;
+}

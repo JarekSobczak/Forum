@@ -9,7 +9,7 @@
     <title>FORUM : login</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
-
+    <link href="${pageContext.request.contextPath}/css/sign-in.css" rel="stylesheet">
 
 </head>
 
@@ -17,7 +17,6 @@
 
 <header>
     <jsp:include page="/include/header.jsp"/>
-    <link href="${pageContext.request.contextPath}/css/sign-in.css" rel="stylesheet">
 </header>
 <main role="main" class="text-center">
     <form class="form-signin" action="login" method="post">
@@ -32,7 +31,7 @@
     </form>
 </main>
 
-<footer class="container">
+<footer >
     <jsp:include page="/include/footer.jsp"/>
 </footer>
 </body>
