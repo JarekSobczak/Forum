@@ -15,8 +15,7 @@ public class UserDao implements Serializable {
             Query query = session.createQuery("select e from " + TbUser.class.getName() + " e where e.login = :login");
             query.setParameter("login", login);
             session.beginTransaction();
-            TbUser singleResult = null;
-            singleResult = (TbUser) query.getSingleResult();
+            TbUser singleResult = (TbUser) query.getSingleResult();
             session.getTransaction().commit();
             return singleResult;
 //        }catch (NoResultException e){
