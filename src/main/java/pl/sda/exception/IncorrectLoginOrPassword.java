@@ -1,4 +1,4 @@
-package exception;
+package pl.sda.exception;
 
 public class IncorrectLoginOrPassword extends Exception {
 

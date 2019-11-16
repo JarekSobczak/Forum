@@ -1,8 +1,8 @@
 package pl.sda.servlet;
 
-import exception.IncorrectLoginOrPassword;
-import persistance.TbUser;
-import service.UserService;
+import pl.sda.exception.IncorrectLoginOrPassword;
+import pl.sda.persistance.entities.TbUser;
+import pl.sda.service.UserService;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,7 +26,6 @@ public class LoginServlet extends HttpServlet {
             tbUser = service.getTbUser(login, password);
 
         } catch (IncorrectLoginOrPassword e) {
-            e.printStackTrace();
             res.sendRedirect("login.jsp");
             return;
         }
