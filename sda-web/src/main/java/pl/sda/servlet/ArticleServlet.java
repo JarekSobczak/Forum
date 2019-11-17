@@ -17,9 +17,11 @@ public class ArticleServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String content=request.getParameter("content");
+        String title=request.getParameter("title");
         HttpSession session=request.getSession();
         TbUser user=(TbUser) session.getAttribute("user");
-        articleService.addArticle(user,content);
+
+        articleService.addArticle(user,title,content);
         response.setCharacterEncoding("UTF-8");
         response.sendRedirect("index.jsp");
     }

@@ -1,5 +1,6 @@
 package pl.sda.persistance.entities;
 
+import com.google.gson.annotations.Expose;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class TbUser implements Serializable {
    private Integer user;
 
     @Column(name = "US_USER_NAME", unique = true, nullable = false, length = 25)
+    @Expose
    private String login;
 
     @Column(name = "US_PASSWORD", nullable = false, length = 25)

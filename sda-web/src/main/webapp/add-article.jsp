@@ -20,7 +20,7 @@
             <form name="addArticleForm" class="needs-validation" action="addArticle" method="post">
                 <div class="mb-3">
                     <label for="title">Tytuł</label>
-                    <input type="text" class="form-control" id="title" placeholder="Tytuł" required="">
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Tytuł" required="">
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
