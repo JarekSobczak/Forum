@@ -10,6 +10,7 @@
 <packaging>pom</packaging>
     <modules>
         <module>sda-web</module>
+        <module>sda-persistance</module>
     </modules>
 
     <properties>

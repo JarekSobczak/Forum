@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/addArticle.jsp">Dodaj wpis</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/add-article.jsp">Dodaj wpis</a>
             </li>
             <li class="nav-item">
                 <c:choose>
