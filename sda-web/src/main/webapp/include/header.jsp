@@ -10,7 +10,12 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/add-article.jsp">Dodaj wpis</a>
+                <c:choose>
+                    <c:when test="${sessionScope.user!=null}">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/add-article.jsp">Dodaj wpis</a>
+                    </c:when>
+                    <c:otherwise><a class="nav-link" href="${pageContext.request.contextPath}/login.jsp"></a></c:otherwise>
+                </c:choose>
             </li>
             <li class="nav-item">
                 <c:choose>
@@ -18,6 +23,14 @@
                 <a class="nav-link" href="${pageContext.request.contextPath}/login.jsp">Zaloguj się</a>
                     </c:when>
                     <c:otherwise><a class="nav-link" href="${pageContext.request.contextPath}/logout">Wyloguj się</a></c:otherwise>
+                </c:choose>
+            </li>
+            <li class="nav-item">
+                <c:choose>
+                    <c:when test="${sessionScope.user==null}">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/signin.jsp">Zapisz się</a>
+                    </c:when>
+                    <c:otherwise><a></a></c:otherwise>
                 </c:choose>
             </li>
         </ul>

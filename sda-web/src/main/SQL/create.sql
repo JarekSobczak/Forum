@@ -1,7 +1,7 @@
 CREATE table if not exists `TB_USER`(
     `US_ID` INT AUTO_INCREMENT,
     `US_USER_NAME` varchar(25) not null,
-    `US_PASSWORD` varchar(25) not null,
+    `US_PASSWORD` varchar(100) not null,
     PRIMARY KEY (`US_ID`)
 );
 

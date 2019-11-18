@@ -17,7 +17,7 @@
     <div class="row text-center">
         <div class="col-md-8 m-auto text-left">
             <h4 class="mb-3">Dodaj nowy wpis</h4>
-            <form name="addArticleForm" class="needs-validation" action="addArticle" method="post">
+            <form name="addArticleForm" class="needs-validation" action="addArticle" method="post" accept-charset="UTF-8">
                 <div class="mb-3">
                     <label for="title">Tytuł</label>
                     <input type="text" class="form-control" name="title" id="title" placeholder="Tytuł" required="">

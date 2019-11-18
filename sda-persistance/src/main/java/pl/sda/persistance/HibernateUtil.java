@@ -22,7 +22,7 @@ public class HibernateUtil {
             return new Configuration()
                     .setProperty(USERNAME,getVariable(USERNAME))
                     .setProperty(PASSWORD,getVariable(PASSWORD))
-                    .setProperty(URL,getVariable(URL)+getVariable(USERNAME))
+                    .setProperty(URL,getVariable(URL))
                     .configure()
                     .buildSessionFactory();
         }catch (Throwable e){

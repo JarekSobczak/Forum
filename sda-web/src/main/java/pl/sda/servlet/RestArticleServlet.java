@@ -25,7 +25,9 @@ public class RestArticleServlet extends HttpServlet {
 
     private void sendAsJson(List models, HttpServletResponse response) throws IOException {
         Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+
         String jSon = gson.toJson(models);
+        response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
         PrintWriter writer = response.getWriter();
         writer.print(jSon);
